@@ -3,38 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/src/style.css"/>
+    <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app">
-  <img
-   id="foto-principal"
-   src="https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/refs/heads/main/venecia/portada.jpg"
-   alt="Foto principal"
-   />
-   <div>
-    <img 
-    id="miniatura1"
-    src="https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/d1505303749b9d689db3cc7ca8b094150e1a7bc9/venecia/foto1.jpg"
-    alt="Basilica de Santa Maria de la Salud, Venecia"
-    class="miniatura"/>
+    <div class="turno-display">
+      <!--<label for ="Turno">Turno</label>
+      <input type="number" id="Turno"><br>-->
+      <div class="marcador" id="marcador">00</div>
+      <p class="texto-turno">¡Tu turno!</p>
+      </div>
+      <div class="botones">
+      <button id="restar">Anterior</button><br>
+      <button id="reset">Reset</button><br>
+      <button id="sumar">Siguiente</button><br>
+      
+      </div>
   
-    <img
-   id="miniatura2"
-   src="https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/d1505303749b9d689db3cc7ca8b094150e1a7bc9/venecia/foto2.jpg"
-   alt="Foto de un gran canal"
-   class="miniatura"/>
-   
-   <img
-   id="miniatura3"
-   src="https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/d51c988c0b6dfba25d198b55230443e8bf7a83b2/venecia/foto4.jpg"
-   alt="Canal tradicional con gondola"
-   class="miniatura"/>
 
-  
-  </div>
+      <p class="texto-turno"></p>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
