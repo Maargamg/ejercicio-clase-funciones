@@ -20,10 +20,10 @@ function turnoMarcador () : void{
 
     document.getElementById("marcador").innerHTML = resultado
 
-    if (resultado !== null && resultado !== undefined){
+    /*if (resultado !== null && resultado !== undefined){
         document.getElementById("marcador").innerHTML = resultado;
         marcadorElement.innerHTML = resultado;
-    }
+    }*/
 };
 
  /*padStart*/
