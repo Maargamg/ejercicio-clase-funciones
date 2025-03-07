@@ -1,30 +1,18 @@
-function turnoMarcador () : void{
-    const sumar = document.getElementById("sumar");
-    const resultado = parseInt("sumar") , ++1;
-    buttonSumar.addEventListener("click", sumar);
+let turno = 0;
+const botonSiguiente = document.getElementById('siguienteTurno');
+const siguiente = () => {
+  turno = turno + 1;
+  
+  const elementoParrafo = document.getElementById('turno');
+  
+  if (elementoParrafo !== null && elementoParrafo !== undefined && elementoParrafo instanceof HTMLParagraphElement) {
+    elementoParrafo.textContent = turno.toString().padStart(2, "0");
+  }
+}
+if (botonSiguiente !== null && botonSiguiente !== undefined && botonSiguiente instanceof HTMLButtonElement) {
+  botonSiguiente.addEventListener('click', () => {
+    siguiente();
+  })
+}
 
-
-    const restar = document.getElementById("restar");
-    const resultado: number = parseInt("restar") , --1;
-    buttonRestar.addEventListener("click", restar);
-
-
-    const reset = document.getElementById("reset");
-    const resultado: number = parseInt("reset") ==0;
-    buttonReset.addEventListener("click", reset);
-
-
-    const manual: HTMLElement | null = document.getElementById("marcador");
-    const resultado: number = parseInt("manual");
-    IdMarcador.addEventListener("click", );
-
-    document.getElementById("marcador").innerHTML = resultado
-
-    /*if (resultado !== null && resultado !== undefined){
-        document.getElementById("marcador").innerHTML = resultado;
-        marcadorElement.innerHTML = resultado;
-    }*/
-};
-
- /*padStart*/
 
