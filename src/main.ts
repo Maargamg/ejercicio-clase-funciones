@@ -1,7 +1,7 @@
 let turno = 0;
-const botonSiguiente = document.getElementById('siguienteTurno');
-const siguiente = () => {
-  turno = turno + 1;
+const botonSiguiente = document.getElementById('sumar');
+const sumar = () => {
+  turno++;
   
   const elementoParrafo = document.getElementById('turno');
   
@@ -11,7 +11,7 @@ const siguiente = () => {
 }
 if (botonSiguiente !== null && botonSiguiente !== undefined && botonSiguiente instanceof HTMLButtonElement) {
   botonSiguiente.addEventListener('click', () => {
-    siguiente();
+    sumar();
   })
 }
 
