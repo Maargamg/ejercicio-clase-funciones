@@ -29,6 +29,23 @@ if (botonAnterior !== null && botonAnterior !== undefined && botonAnterior insta
 })
 };
 
+const botonReset = document.getElementById('reset');
+const reset = () => {
+  turno = 0;
+const elementoParrafo = document.getElementById('turno');
+  
+  if (elementoParrafo !== null && elementoParrafo !== undefined && elementoParrafo instanceof HTMLParagraphElement) {
+    elementoParrafo.textContent = turno.toString().padStart(2, "0");
+  }
+}
+if (botonReset !== null && botonReset !== undefined && botonReset instanceof HTMLButtonElement) {
+  botonReset.addEventListener('click', () => {
+    reset();
+  })
+};
+
+
+
 
 
 
