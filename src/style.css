@@ -29,7 +29,8 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  gap:30px;
+  gap: 10px;
+  margin-bottom:20px;
 }
 
 .botones button {
@@ -45,6 +46,24 @@
   transition: background-color 0.3s ease;
 }
 
-.botones button {
-  background-color: blueviolet;
+.inputManual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
+.inputManual button {
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+

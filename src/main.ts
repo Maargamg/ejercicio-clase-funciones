@@ -20,7 +20,10 @@ const restar = () => {
 const elementoParrafo = document.getElementById('turno');
 
   if (elementoParrafo !== null && elementoParrafo !== undefined && elementoParrafo instanceof HTMLParagraphElement) {
-    elementoParrafo.textContent = turno.toString().padStart(2, "0");
+   
+    if (turno >= 0){
+      elementoParrafo.textContent = turno.toString().padStart(2, "0");
+    }
   }
 }
 if (botonAnterior !== null && botonAnterior !== undefined && botonAnterior instanceof HTMLButtonElement) {
@@ -44,7 +47,29 @@ if (botonReset !== null && botonReset !== undefined && botonReset instanceof HTM
   })
 };
 
+const introducirTurnoManual = () => {
+  const turnoManual = document.getElementById('turnoManual');
 
+  if (turnoManual !== null && turnoManual !== undefined && turnoManual instanceof HTMLInputElement) {
+    const valorInput = turnoManual.value;
+
+    const elementoParrafo = document.getElementById('turno');
+
+    if (elementoParrafo !== null && elementoParrafo !== undefined && elementoParrafo instanceof HTMLParagraphElement) {
+      turno = parseInt(valorInput);
+      elementoParrafo.textContent = valorInput.padStart(2, "0");
+    }
+  }
+}
+
+const botonTurnoManual = document.getElementById('introducirTurnoManual');
+
+if (botonTurnoManual !== null && botonTurnoManual !== undefined && botonTurnoManual instanceof HTMLButtonElement) {
+  botonTurnoManual.addEventListener('click', () => {
+    introducirTurnoManual();
+  })
+}
+ 
 
 
 
